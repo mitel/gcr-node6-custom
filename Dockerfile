@@ -13,7 +13,7 @@ RUN /usr/local/bin/install_node '~6.4'
 # as well.
 # This command will also cat the npm-debug.log file after the
 # build, if it exists.
-RUN npm install --unsafe-perm || \
-  ((if [ -f npm-debug.log ]; then \
-      cat npm-debug.log; \
-    fi) && false)
+# RUN npm install --unsafe-perm || \
+#  ((if [ -f npm-debug.log ]; then \
+#      cat npm-debug.log; \
+#    fi) && false)
