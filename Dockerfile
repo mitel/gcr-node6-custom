@@ -17,6 +17,7 @@ EXPOSE 8080
 # as well.
 # This command will also cat the npm-debug.log file after the
 # build, if it exists.
+WORKDIR /app
 RUN npm install --unsafe-perm || \
   ((if [ -f npm-debug.log ]; then \
       cat npm-debug.log; \
