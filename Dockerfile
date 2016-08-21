@@ -6,9 +6,9 @@ FROM gcr.io/google_appengine/nodejs
 # version that satisfies it.
 RUN /usr/local/bin/install_node '~6.4'
 
-COPY . /app/ 
+# COPY . /app/ 
 
-EXPOSE 8080
+# EXPOSE 8080
 
 # You have to specify "--unsafe-perm" with npm install
 # when running as root.  Failing to do this can cause
@@ -17,9 +17,9 @@ EXPOSE 8080
 # as well.
 # This command will also cat the npm-debug.log file after the
 # build, if it exists.
-WORKDIR /app
-RUN npm install --unsafe-perm || \
-  ((if [ -f npm-debug.log ]; then \
-      cat npm-debug.log; \
-    fi) && false)
-CMD npm start
+# WORKDIR /app
+# RUN npm install --unsafe-perm || \
+#   ((if [ -f npm-debug.log ]; then \
+#       cat npm-debug.log; \
+#     fi) && false)
+# CMD npm start
